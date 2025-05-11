@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Únete a nuestra lista exclusiva y recibe estrategias de negocios transformadoras. Formulario simple para recolección de leads profesionales.">
+    <meta name="keywords" content="lead generation, captación de clientes, email marketing, estrategias de negocio, marketing digital, conversión de leads, crecimiento empresarial, landing page efectiva, captura de emails, formulario de contacto">
+    <meta name="author" content="TuNombre">
+
+    <meta property="og:title" content="Lead Collection | Transforma tu Negocio">
+    <meta property="og:description" content="Accede a estrategias exclusivas para hacer crecer tu empresa">
+    <meta property="og:type" content="website">
+    <title>Lead Collection | Transforma tu Negocio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background-overlay"></div>
+
+<div class="container">
+
+    <div class="form-card">
+        <h1>Transforma tu negocio</h1>
+        <p class="subtitle">¡Únete a nuestra lista y recibe estrategias exclusivas directamente en tu correo!</p>
+
+        <form id="leadForm" class="lead-form" novalidate>
+            <div class="input-group">
+                <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                <span class="input-icon valid-icon">✓</span>
+                <span class="input-icon error-icon">✗</span>
+                <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                <span class="input-icon valid-icon">✓</span>
+                <span class="input-icon error-icon">✗</span>
+                <span class="error-message" id="emailError"></span>
+            </div>
+
+            <button type="submit" id="submitBtn">
+                <span class="btn-text">Obtener acceso ahora</span>
+                <span class="btn-loading">
+                        <span class="loading-spinner"></span>
+                        Procesando...
+                    </span>
+            </button>
+        </form>
+
+        <p class="privacy-notice">
+            Al registrarte, aceptas nuestra política de privacidad y términos de servicio.
+            No compartiremos tu información con terceros.
+        </p>
+    </div>
+</div>
+
+<div id="successMessage" class="success-message">
+    <div class="success-content">
+        <div class="success-icon">✓</div>
+        <h2>¡Gracias por unirte!</h2>
+        <p>Hemos enviado un correo de confirmación a <span id="userEmail"></span>.
+            Revisa tu bandeja de entrada para acceder a nuestras estrategias exclusivas.</p>
+        <button id="backButton" class="back-button">Volver al formulario</button>
+    </div>
+    <canvas id="confettiCanvas"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
